@@ -1,0 +1,36 @@
+/* CSci4061 S2016 Assignment 2
+ * section: 7
+ * section: 2
+ * section: 2
+ * date: 03/10/2016
+ * name: Sujita Shah, Charon chen
+ * id: shahx220, chen4393 */
+
+1. Our program is about a chat application based on Linux platform
+
+2. Compilation: 
+move to the directory of ./chat folder 
+type make in the terminal 
+
+3. Using from the shell
+type ./server to start 
+test the following requirements
+
+4. Instruction: 
+In the server part, you can do the following thins: 
+\add <username>: create a new user name
+\list: display a list of all added users
+\kick <username>: remove one user by its name
+\exit: terminate all users’ command windows and the server program
+<any-other-text>: broadcast to all users
+
+In the user command window, you can do the following things:
+\p2p <username> <text>: send message to another user by its name, if there is no such a user, it will display the error message
+\exit: the user will terminated and its info
+<any-other-text>: broadcast to all users and the a “Broadcasting” will be displayed on server
+
+5. Assumption:
+There will be no more than 10 users and message should be less than 1024 bytes
+
+6. Error handling:
+Check the return value of the system calls in our program, if they are -1, print error message and exit by perror().
